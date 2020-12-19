@@ -1,20 +1,7 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+import errorWindow from "images/ie-modal.png"
 
 const Window = ({ position }) => {
-  const data = useStaticQuery(graphql`
-    query {
-      ieModal: file(relativePath: { eq: "ie-modal.png" }) {
-        childImageSharp {
-          fixed(width: 500) {
-            ...GatsbyImageSharpFixed
-          }
-        }
-      }
-    }
-  `)
-
   return (
     <div
       className="w-4/12 h-auto"
@@ -25,7 +12,7 @@ const Window = ({ position }) => {
         top: position.top - 75,
       }}
     >
-      <Img fixed={data.ieModal.childImageSharp.fixed} alt="Error Window" />
+      <img src={errorWindow} alt="Error Window" />
     </div>
   )
 }
