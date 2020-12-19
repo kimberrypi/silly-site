@@ -4,10 +4,8 @@ import errorWindow from "images/ie-modal.png"
 const Window = ({ position }) => {
   return (
     <div
-      className="w-4/12 h-auto"
+      className="w-4/12 h-auto float-left absolute"
       style={{
-        position: "absolute",
-        float: "left",
         left: position.left,
         top: position.top - 75,
       }}
